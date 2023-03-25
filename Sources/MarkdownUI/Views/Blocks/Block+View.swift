@@ -19,7 +19,7 @@ extension Block: View {
       if let imageView = ImageView(inlines) {
         ApplyBlockStyle(\.paragraph, to: imageView)
       } else if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *),
-        let imageFlow = ImageFlow(inlines)
+                let imageFlow = ImageFlow(inlines)
       {
         ApplyBlockStyle(\.paragraph, to: imageFlow)
       } else {

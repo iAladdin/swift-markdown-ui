@@ -14,5 +14,16 @@ struct CodeBlockView: View {
   var body: some View {
     self.codeSyntaxHighlighter.highlightCode(self.content, language: self.info)
       .textStyleFont()
+      .overlay(
+        Button {
+          UIPasteboard.general.string = content
+        } label: {
+          Image(systemName: "doc.on.doc")
+            .font(.caption)
+        }
+        .foregroundColor(Color.accentColor)
+        .offset(x: -4, y: -16),
+        alignment: .topLeading
+      )
   }
 }
