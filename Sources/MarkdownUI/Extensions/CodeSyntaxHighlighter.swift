@@ -22,9 +22,9 @@ public struct PlainTextCodeSyntaxHighlighter: CodeSyntaxHighlighter {
   }
 }
 
-extension CodeSyntaxHighlighter where Self == PlainTextCodeSyntaxHighlighter {
+public extension CodeSyntaxHighlighter where Self == PlainTextCodeSyntaxHighlighter {
   /// A code syntax highlighter that returns unstyled code blocks.
-  public static var plainText: Self {
+  static var plainText: Self {
     PlainTextCodeSyntaxHighlighter()
   }
 }

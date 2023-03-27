@@ -22,7 +22,7 @@ struct CodeBlockView: View {
             .font(.caption)
         }
         .foregroundColor(Color.accentColor)
-        .offset(x: -4, y: -16),
+        .offset(x: -14, y: 0),
         alignment: .topLeading
       )
   }

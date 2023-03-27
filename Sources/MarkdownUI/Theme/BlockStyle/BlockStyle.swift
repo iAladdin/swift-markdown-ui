@@ -51,10 +51,10 @@ public struct BlockStyle<Configuration> {
   }
 }
 
-extension BlockStyle where Configuration == Void {
+public extension BlockStyle where Configuration == Void {
   /// Creates a block style for a block with no content, like a thematic break.
   /// - Parameter body: A view builder that returns the customized block.
-  public init<Body: View>(@ViewBuilder body: @escaping () -> Body) {
+  init<Body: View>(@ViewBuilder body: @escaping () -> Body) {
     self.init { _ in
       body()
     }
